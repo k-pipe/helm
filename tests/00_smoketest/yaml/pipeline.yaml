@@ -1,0 +1,11 @@
+apiVersion: pipeline.k-pipe.cloud/v1
+kind: PipelineDefinition
+metadata:
+  name: smoke-test-0.0.1
+  namespace: default
+spec:
+  pipelineName: smoke-test
+  version: 0.0.1
+  pipelineStructure:
+    jobSteps:
+    pipes:
