@@ -1,7 +1,0 @@
-apiVersion: pipeline.k-pipe.cloud/v1
-kind: PipelineRun
-metadata:
-  name: "test-run"
-spec:
-  pipelineName: "two-steps"
-  versionPattern: "0.0.1"
