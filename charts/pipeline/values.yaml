@@ -83,3 +83,7 @@ env:
 
   # resource estimation
   resourceEstimationService: ""
+
+  # service account creation
+  createPipelineServiceAccounts: "false"
+  createSchedulerServiceAccount: "true"

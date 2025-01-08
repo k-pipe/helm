@@ -60,6 +60,10 @@ spec:
               value: "{{ .Values.env.initScriptSeparator }}"
             - name: RESOURCE_ESTIMATION_SERVICE
               value: "{{ .Values.env.resourceEstimationService }}"
+            - name: CREATE_PIPELINE_SERVICE_ACCOUNTS
+              value: "{{ .Values.env.createPipelineServiceAccounts }}"
+            - name: CREATE_SCHEDULER_SERVICE_ACCOUNT
+              value: "{{ .Values.env.createSchedulerServiceAccount }}"
           livenessProbe:
             httpGet:
               path: /healthz
