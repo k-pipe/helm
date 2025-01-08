@@ -20,6 +20,8 @@ init_cluster() {
        exit 1
      fi
     fi
+    echo Deployment got available:
+    kubectl get deployment -n k-pipe k-pipe-operator
 }
 
 if [[ `kind get clusters | grep -c ""` == 0 ]]
