@@ -63,6 +63,10 @@ spec:
           spec:
             description: ScheduleSpec defines the desired state of Schedule
             properties:
+              parameters:
+                additionalProperties:
+                  type: string
+                type: object
               pipelineName:
                 type: string
               schedules:
