@@ -115,9 +115,16 @@ spec:
                           description: DockerImageSpec defines docker image used to
                             run a job
                           properties:
+                            fallback:
+                              type: string
                             name:
                               type: string
+                            path:
+                              type: string
                             provider:
+                              description: |-
+                                if provider is used, then the ManagedDockerImage with specified name in namespace given by parameter provider is used,
+                                all other fields will be ignored
                               type: string
                             repository:
                               type: string
@@ -229,9 +236,16 @@ spec:
                     description: DockerImageSpec defines docker image used to run
                       a job
                     properties:
+                      fallback:
+                        type: string
                       name:
                         type: string
+                      path:
+                        type: string
                       provider:
+                        description: |-
+                          if provider is used, then the ManagedDockerImage with specified name in namespace given by parameter provider is used,
+                          all other fields will be ignored
                         type: string
                       repository:
                         type: string
