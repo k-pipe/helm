@@ -126,6 +126,11 @@ spec:
                                 if provider is used, then the ManagedDockerImage with specified name in namespace given by parameter provider is used,
                                 all other fields will be ignored
                               type: string
+                            release:
+                              description: if provider is used, the name and release
+                                info together determine the image tag (specified by
+                                provider's custom resource)
+                              type: string
                             repository:
                               type: string
                             tag:
@@ -246,6 +251,11 @@ spec:
                         description: |-
                           if provider is used, then the ManagedDockerImage with specified name in namespace given by parameter provider is used,
                           all other fields will be ignored
+                        type: string
+                      release:
+                        description: if provider is used, the name and release info
+                          together determine the image tag (specified by provider's
+                          custom resource)
                         type: string
                       repository:
                         type: string
