@@ -8,10 +8,10 @@ spec:
   pipelineStructure:
     jobSteps:
     - id: step-a
-      image: busybox
+      image.name: busybox
       command: ["sh", "-c", "sleep 20" ]
     - id: step-b
-      image: busybox
+      image.name: busybox
       command: ["sh", "-c", "sleep 2" ]
     pipes:
       - from:

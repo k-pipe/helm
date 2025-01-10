@@ -8,5 +8,5 @@ spec:
   pipelineStructure:
     jobSteps:
     - id: step-a
-      image: busybox
+      image.name: busybox
       command: ["sh", "-c", "echo hello world" ]
