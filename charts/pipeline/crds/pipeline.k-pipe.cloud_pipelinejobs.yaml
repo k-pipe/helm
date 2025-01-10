@@ -111,7 +111,9 @@ spec:
                           x-kubernetes-preserve-unknown-fields: true
                         description:
                           type: string
-                        dockerimage:
+                        id:
+                          type: string
+                        image:
                           description: DockerImageSpec defines docker image used to
                             run a job
                           properties:
@@ -138,10 +140,6 @@ spec:
                           required:
                           - name
                           type: object
-                        id:
-                          type: string
-                        image:
-                          type: string
                         workdir:
                           type: string
                       required:
@@ -237,7 +235,9 @@ spec:
                     x-kubernetes-preserve-unknown-fields: true
                   description:
                     type: string
-                  dockerimage:
+                  id:
+                    type: string
+                  image:
                     description: DockerImageSpec defines docker image used to run
                       a job
                     properties:
@@ -264,10 +264,6 @@ spec:
                     required:
                     - name
                     type: object
-                  id:
-                    type: string
-                  image:
-                    type: string
                   workdir:
                     type: string
                 required:
