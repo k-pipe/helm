@@ -356,11 +356,6 @@ spec:
                       type: string
                     terminationReason:
                       type: string
-                  required:
-                  - exitCode
-                  - signal
-                  - terminationLogs
-                  - terminationReason
                   type: object
                 type: object
               status:
