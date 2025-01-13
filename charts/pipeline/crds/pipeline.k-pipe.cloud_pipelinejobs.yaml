@@ -365,8 +365,6 @@ spec:
                 type: object
               status:
                 type: string
-            required:
-            - podResults
             type: object
         type: object
     served: true
