@@ -12,8 +12,8 @@ spec:
     listKind: PipelineManagedImageList
     plural: pipelinemanagedimages
     shortNames:
-    - mi
-    singular: managedimage
+    - pmi
+    singular: pipelinemanagedimage
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
