@@ -9,7 +9,7 @@ On a K8s cluster of your choice (simplest way is to run one locally using [kind]
 install the operator using the following commands:
 
 ```
-helm repo add k-pipe https://helm.k-pipe.cloud
+helm repo add k-pipe https://k-pipe.github.io/helm
 kubectl create namespace k-pipe
 helm install k-pipe k-pipe/operator -n k-pipe
 ```
@@ -149,6 +149,6 @@ fix this.
 
 ## Further information
 
-For more examples and details of the setup and a specification to all functionality provided by the k-pipe operator have a look at the [documentation](https://helm.k-pipe.cloud/doc).
+For more examples and details of the setup and a specification to all functionality provided by the k-pipe operator have a look at the [documentation](https://k-pipe.github.io/helm/doc).
 
 

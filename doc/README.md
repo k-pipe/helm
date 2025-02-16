@@ -1,5 +1,5 @@
 
-This page constitutes the documentation of the [k-pipe operator](https://helm.k-pipe.cloud), which provides 
+This page constitutes the documentation of the [k-pipe operator](https://k-pipe.github.io/helm/), which provides 
 an extension of kubernetes to define, execute and schedule processing pipelines as native K8s resources.
 
 ## Table of contents
@@ -107,7 +107,7 @@ of GPU types depends on multiple factors and is not stable).
 There is (currently) only one helm parameter relevant for resource estimation (because, at this moment,
 resource estimation does nothing else than requesting the specified maximal values):
 
-| Variable                  | Type   | Default                           | Description                                                                                                  |
-|---------------------------|--------|-----------------------------------|--------------------------------------------------------------------------------------------------------------|
-| resourceEstimationService | string | ""                                | set this to "https://europe-west3-k-pipe-server.cloudfunctions.net/resource-estimation" ton enable GPU usage |
+| Variable                  | Type   | Default                           | Description                                                                                                 |
+|---------------------------|--------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
+| resourceEstimationService | string | ""                                | set this to "https://europe-west3-k-pipe-server.cloudfunctions.net/resource-estimation" to enable GPU usage |
 
