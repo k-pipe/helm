@@ -34,7 +34,8 @@ spec:
   pipelineStructure:
     jobSteps:
     - id: step1
-      image: busybox
+      image:
+        name: busybox
       command: ["sh", "-c", "echo hello world && sleep 30"]
 ```
 
