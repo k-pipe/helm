@@ -142,7 +142,9 @@ spec:
                           type: object
                         secrets:
                           additionalProperties:
-                            type: string
+                            additionalProperties:
+                              type: string
+                            type: object
                           type: object
                         workdir:
                           type: string
@@ -270,7 +272,9 @@ spec:
                     type: object
                   secrets:
                     additionalProperties:
-                      type: string
+                      additionalProperties:
+                        type: string
+                      type: object
                     type: object
                   workdir:
                     type: string
