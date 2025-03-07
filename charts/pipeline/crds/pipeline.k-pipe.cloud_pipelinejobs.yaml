@@ -141,11 +141,20 @@ spec:
                           - name
                           type: object
                         secrets:
-                          additionalProperties:
-                            additionalProperties:
-                              type: string
+                          items:
+                            properties:
+                              envVar:
+                                type: string
+                              key:
+                                type: string
+                              secret:
+                                type: string
+                            required:
+                            - envVar
+                            - key
+                            - secret
                             type: object
-                          type: object
+                          type: array
                         workdir:
                           type: string
                       required:
@@ -271,11 +280,20 @@ spec:
                     - name
                     type: object
                   secrets:
-                    additionalProperties:
-                      additionalProperties:
-                        type: string
+                    items:
+                      properties:
+                        envVar:
+                          type: string
+                        key:
+                          type: string
+                        secret:
+                          type: string
+                      required:
+                      - envVar
+                      - key
+                      - secret
                       type: object
-                    type: object
+                    type: array
                   workdir:
                     type: string
                 required:
