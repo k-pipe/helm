@@ -140,6 +140,10 @@ spec:
                           required:
                           - name
                           type: object
+                        secrets:
+                          additionalProperties:
+                            type: string
+                          type: object
                         workdir:
                           type: string
                       required:
@@ -263,6 +267,10 @@ spec:
                         type: string
                     required:
                     - name
+                    type: object
+                  secrets:
+                    additionalProperties:
+                      type: string
                     type: object
                   workdir:
                     type: string
