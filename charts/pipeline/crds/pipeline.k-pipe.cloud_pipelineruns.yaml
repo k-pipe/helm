@@ -357,6 +357,8 @@ spec:
                           properties:
                             batched:
                               type: boolean
+                            filename:
+                              type: string
                             from:
                               description: PipelineConnector defines step and pipe
                                 name at either end of a pipe
