@@ -167,21 +167,20 @@ spec:
                 type: array
               inputVolumes:
                 items:
-                  description: InputPipe defines source and target name of input pipe
-                    file
+                  description: InputPipe defines parameters of an incoming pipe
                   properties:
+                    filename:
+                      type: string
                     mountPath:
                       type: string
-                    sourceFile:
-                      type: string
-                    targetFile:
+                    targetArg:
                       type: string
                     volume:
                       type: string
                   required:
+                  - filename
                   - mountPath
-                  - sourceFile
-                  - targetFile
+                  - targetArg
                   - volume
                   type: object
                 type: array
@@ -218,8 +217,21 @@ spec:
                     format: int32
                     type: integer
                 type: object
-              output:
+              outputVolume:
                 type: string
+              outputs:
+                items:
+                  description: OutputPipe defines parameters of an outgoing pipe
+                  properties:
+                    filename:
+                      type: string
+                    sourceArg:
+                      type: string
+                  required:
+                  - filename
+                  - sourceArg
+                  type: object
+                type: array
               parameters:
                 additionalProperties:
                   type: string
@@ -300,7 +312,7 @@ spec:
                 - id
                 type: object
             required:
-            - output
+            - outputVolume
             - pipelineName
             - pipelineRun
             - pipelineVersion

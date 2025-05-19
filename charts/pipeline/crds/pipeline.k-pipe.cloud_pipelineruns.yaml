@@ -88,8 +88,19 @@ spec:
                   - pvc
                   type: object
                 type: array
-              output:
-                type: string
+              outputs:
+                description: RunOutput defines assignments of output PVCs to be passed
+                  to calling parent run
+                properties:
+                  files:
+                    additionalProperties:
+                      type: string
+                    type: object
+                  pvc:
+                    type: string
+                required:
+                - pvc
+                type: object
               parameters:
                 additionalProperties:
                   type: string
@@ -278,10 +289,34 @@ spec:
                               - to
                               type: object
                             type: array
-                          outputStep:
-                            type: string
+                          outputs:
+                            items:
+                              description: PipelineOutput defines the outputs that
+                                can be accessed from outside
+                              properties:
+                                description:
+                                  type: string
+                                from:
+                                  description: PipelineConnector defines step and
+                                    pipe name at either end of a pipe
+                                  properties:
+                                    name:
+                                      type: string
+                                    stepId:
+                                      type: string
+                                  required:
+                                  - stepId
+                                  type: object
+                                id:
+                                  type: string
+                              required:
+                              - from
+                              - id
+                              type: object
+                            type: array
                         required:
                         - inputs
+                        - outputs
                         type: object
                       jobSteps:
                         items:

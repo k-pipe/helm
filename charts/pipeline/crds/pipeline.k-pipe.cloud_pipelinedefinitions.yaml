@@ -142,10 +142,34 @@ spec:
                           - to
                           type: object
                         type: array
-                      outputStep:
-                        type: string
+                      outputs:
+                        items:
+                          description: PipelineOutput defines the outputs that can
+                            be accessed from outside
+                          properties:
+                            description:
+                              type: string
+                            from:
+                              description: PipelineConnector defines step and pipe
+                                name at either end of a pipe
+                              properties:
+                                name:
+                                  type: string
+                                stepId:
+                                  type: string
+                              required:
+                              - stepId
+                              type: object
+                            id:
+                              type: string
+                          required:
+                          - from
+                          - id
+                          type: object
+                        type: array
                     required:
                     - inputs
+                    - outputs
                     type: object
                   jobSteps:
                     items:
