@@ -27,6 +27,8 @@ bash "$1"check.sh
 if [[ $? != 0 ]]
 then
   echoerr Checks failed
+  echoerr Operator logs:
+  kubectl logs deployment/k-pipe-operator -n k-pipe
   exit 1
 fi
 
