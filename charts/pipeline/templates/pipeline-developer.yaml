@@ -1,0 +1,27 @@
+{{- if .Values.rbac.create }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pipeline-developer
+rules:
+  - apiGroups:
+      - pipeline.k-pipe.cloud
+    resources:
+      - pipelinedefinitions
+      - pipelineruns
+      - pipelineschedules
+      - pipelinejobs
+      - pipelineproblems
+      - pipelinemanagedimages
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      - patch
+      - delete
+      -
+  - apiGroups: ["", "batch"]
+    resources: ["pods","jobs", "cronjobs", "events"]
+    verbs: ["get", "list", "watch"]
+{{- end }}
