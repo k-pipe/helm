@@ -25,6 +25,7 @@ rules:
       - ""
     resources:
       - pods
+      - pods/log
       - persistentvolumeclaims
       - serviceaccounts
       - configmaps
