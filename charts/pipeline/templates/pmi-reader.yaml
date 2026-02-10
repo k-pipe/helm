@@ -1,0 +1,15 @@
+{{- if .Values.rbac.create }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pmi-reader
+rules:
+  - apiGroups:
+      - pipeline.k-pipe.cloud
+    resources:
+      - pipelinemanagedimages
+    verbs:
+      - get
+      - list
+      - watch
+{{- end }}
