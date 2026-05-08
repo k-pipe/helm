@@ -516,6 +516,12 @@ spec:
                   - workloadSpec
                   type: object
                 type: array
+              ttlSecondsAfterFailed:
+                format: int32
+                type: integer
+              ttlSecondsAfterSucceeded:
+                format: int32
+                type: integer
               version:
                 type: string
             required:

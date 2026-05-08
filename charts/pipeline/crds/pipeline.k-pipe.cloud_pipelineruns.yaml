@@ -122,6 +122,12 @@ spec:
                 type: object
               pipelineName:
                 type: string
+              ttlSecondsAfterFailed:
+                format: int32
+                type: integer
+              ttlSecondsAfterSucceeded:
+                format: int32
+                type: integer
               versionPattern:
                 type: string
             required:
@@ -663,6 +669,12 @@ spec:
                       - workloadSpec
                       type: object
                     type: array
+                  ttlSecondsAfterFailed:
+                    format: int32
+                    type: integer
+                  ttlSecondsAfterSucceeded:
+                    format: int32
+                    type: integer
                   version:
                     type: string
                 required:
@@ -673,6 +685,9 @@ spec:
               pipelineVersion:
                 type: string
               status:
+                type: string
+              terminatedAt:
+                format: date-time
                 type: string
               terminationLogs:
                 additionalProperties:
