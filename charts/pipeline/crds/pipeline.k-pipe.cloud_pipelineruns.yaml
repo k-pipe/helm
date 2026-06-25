@@ -669,6 +669,12 @@ spec:
                       - workloadSpec
                       type: object
                     type: array
+                  stepTimeoutMinutes:
+                    description: |-
+                      StepTimeoutMinutes overrides the cluster-wide STEP_TIMEOUT_MINUTES for this pipeline.
+                      Steps in progress longer than this will be marked as timed out. 0 or unset = use cluster default.
+                    format: int32
+                    type: integer
                   ttlSecondsAfterFailed:
                     format: int32
                     type: integer
