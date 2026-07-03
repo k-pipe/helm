@@ -89,6 +89,38 @@ spec:
                           type: string
                         maxStorage:
                           type: string
+                        projectedTokens:
+                          description: |-
+                            ProjectedTokens mounts projected Kubernetes service account tokens into the step container.
+                            Each entry creates a projected volume and mounts it at the specified path.
+                            Use this for workload identity federation (e.g. Azure, AWS).
+                          items:
+                            description: ProjectedServiceAccountToken defines a projected
+                              Kubernetes service account token to mount into a step.
+                            properties:
+                              audience:
+                                description: Audience is the intended audience of
+                                  the token (e.g. "api://AzureADTokenExchange").
+                                type: string
+                              expirationSeconds:
+                                description: ExpirationSeconds is the requested token
+                                  lifetime in seconds. Defaults to 3600.
+                                format: int64
+                                type: integer
+                              mountPath:
+                                description: MountPath is the directory where the
+                                  token file will be mounted.
+                                type: string
+                              name:
+                                description: Name is the volume name and token file
+                                  name within the mount path.
+                                type: string
+                            required:
+                            - audience
+                            - mountPath
+                            - name
+                            type: object
+                          type: array
                         serviceAccountName:
                           type: string
                         specification:
@@ -327,6 +359,38 @@ spec:
                           type: string
                         maxStorage:
                           type: string
+                        projectedTokens:
+                          description: |-
+                            ProjectedTokens mounts projected Kubernetes service account tokens into the step container.
+                            Each entry creates a projected volume and mounts it at the specified path.
+                            Use this for workload identity federation (e.g. Azure, AWS).
+                          items:
+                            description: ProjectedServiceAccountToken defines a projected
+                              Kubernetes service account token to mount into a step.
+                            properties:
+                              audience:
+                                description: Audience is the intended audience of
+                                  the token (e.g. "api://AzureADTokenExchange").
+                                type: string
+                              expirationSeconds:
+                                description: ExpirationSeconds is the requested token
+                                  lifetime in seconds. Defaults to 3600.
+                                format: int64
+                                type: integer
+                              mountPath:
+                                description: MountPath is the directory where the
+                                  token file will be mounted.
+                                type: string
+                              name:
+                                description: Name is the volume name and token file
+                                  name within the mount path.
+                                type: string
+                            required:
+                            - audience
+                            - mountPath
+                            - name
+                            type: object
+                          type: array
                         serviceAccountName:
                           type: string
                         specification:
@@ -435,6 +499,38 @@ spec:
                           type: string
                         maxStorage:
                           type: string
+                        projectedTokens:
+                          description: |-
+                            ProjectedTokens mounts projected Kubernetes service account tokens into the step container.
+                            Each entry creates a projected volume and mounts it at the specified path.
+                            Use this for workload identity federation (e.g. Azure, AWS).
+                          items:
+                            description: ProjectedServiceAccountToken defines a projected
+                              Kubernetes service account token to mount into a step.
+                            properties:
+                              audience:
+                                description: Audience is the intended audience of
+                                  the token (e.g. "api://AzureADTokenExchange").
+                                type: string
+                              expirationSeconds:
+                                description: ExpirationSeconds is the requested token
+                                  lifetime in seconds. Defaults to 3600.
+                                format: int64
+                                type: integer
+                              mountPath:
+                                description: MountPath is the directory where the
+                                  token file will be mounted.
+                                type: string
+                              name:
+                                description: Name is the volume name and token file
+                                  name within the mount path.
+                                type: string
+                            required:
+                            - audience
+                            - mountPath
+                            - name
+                            type: object
+                          type: array
                         serviceAccountName:
                           type: string
                         specification:
